@@ -1,0 +1,17 @@
+
+/* DETAILS META FORM */
+div.ds-meta-details table {
+	width: 100%;
+}
+div.ds-meta-details table td {
+	white-space: nowrap;
+}
+div.ds-meta-details table td.col1 {
+	width: 20%;
+}
+div.ds-meta-details table td.col2 {
+	width: 80%;
+}
+div.ds-meta-details table td input {
+	width: 100%;
+}
