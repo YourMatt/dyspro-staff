@@ -24,6 +24,7 @@ register_uninstall_hook (__FILE__, array ($ds_plugin_manager, 'uninstall'));
 // set up actions
 add_action ('init', array ($ds_plugin_manager, 'register_staff_taxonomy'));
 add_action ('init', array ($ds_plugin_manager, 'register_staff_post_type'));
+add_action ('add_meta_boxes', array ($ds_details_manager, 'add_meta_boxes'));
 
 // set up shortcodes
 add_shortcode ('ds_staff_list', array ($ds_shortcode_manager, 'build_staff_list'));
