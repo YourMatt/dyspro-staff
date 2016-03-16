@@ -17,4 +17,33 @@ class ds_utilities {
 
     }
 
+    public static function get_staff_items ($type) {
+
+        // load the base staff posts
+        $staff = get_posts (array (
+            'post_type' => DS_POST_TYPE_NAME,
+            'posts_per_page' => -1,
+            'orderby' => 'ID', // TODO: Change to load by user-specified order
+            'order' => 'ASC',
+            'tax_query' => array(
+                array(
+                    'taxonomy' => DS_CATEGORY_TYPE_NAME,
+                    'field' => 'slug',
+                    'terms' => $type
+                )
+            )
+        ));
+        if (!$staff) return array ();
+
+        // load meta data for each staff item
+        $num_staff = count ($staff);
+        for ($i = 0; $i < $num_staff; $i++) {
+            $staff[$i]->meta = get_post_meta ($staff[$i]->ID);
+            $staff[$i]->thumb = get_the_post_thumbnail ($staff[$i]->ID, 'large');
+        }
+
+        return $staff;
+
+    }
+
 }
