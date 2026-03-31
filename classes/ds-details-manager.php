@@ -1,4 +1,4 @@
-<?
+<?php
 
 class ds_details_manager {
 

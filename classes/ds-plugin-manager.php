@@ -1,4 +1,4 @@
-<?
+<?php
 
 class ds_plugin_manager {
 
