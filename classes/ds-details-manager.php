@@ -47,6 +47,12 @@ class ds_details_manager {
 
         // save the contact data to meta fields
         ds_utilities::save_meta_field ($post_id, 'staff_title', '_ds_title');
+        ds_utilities::save_meta_field ($post_id, 'staff_start_date', '_ds_start_date');
+        ds_utilities::save_meta_field ($post_id, 'staff_term_expiration', '_ds_term_expiration');
+        ds_utilities::save_meta_field ($post_id, 'staff_company', '_ds_company');
+        ds_utilities::save_meta_field ($post_id, 'staff_committee', '_ds_committee');
+        ds_utilities::save_meta_field ($post_id, 'staff_membership', '_ds_membership');
+        ds_utilities::save_meta_field ($post_id, 'staff_phone', '_ds_phone');
 
         return $post_id;
 
