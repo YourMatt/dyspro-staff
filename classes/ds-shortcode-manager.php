@@ -33,8 +33,7 @@ class ds_shortcode_manager {
             $staff_list .= '<h3>' . $staff_item->post_title . '</h3>';
             if ($company)
                 $staff_list .= '<h4>' . $company . '</h4>';
-            if ($title)
-                $staff_list .= '<h4>' . trim ($title . ' ' . $title_suffix) . '</h4>';
+            $staff_list .= '<h4>' . trim ($title . ' ' . $title_suffix) . '</h4>';
             if ($committees)
                 $staff_list .= '<h4>' . $committees . ' Committee</h4>';
             $staff_list .= '<p>' . nl2br ($staff_item->post_content) . '</p>';

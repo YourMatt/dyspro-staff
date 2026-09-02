@@ -6,8 +6,10 @@ class ds_utilities {
     private static $title_sort_order = array (
         'chair',
         'immediate past',
+        'vice chair',
         'treasurer',
         'secretary',
+        '',
         'board member'
     );
 
